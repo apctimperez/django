@@ -1,6 +1,6 @@
-from django.shortcuts import render # type: ignore
-from django.http import HttpResponse # type: ignore
+from django.urls import path
+from . import views
 
-def members(request):
-    return HttpResponse("Hello world!")
-# Create your views here.
+urlpatterns = [
+    path('members/', views.members, name='members'),
+]
